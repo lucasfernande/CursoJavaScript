@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Strings</title>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            let nome = window.prompt('Qual o seu nome?')
+            document.write(nome + '<br/>')
+            document.write(`Seu nome tem ${nome.length} letras <br/>`) // length mostra a quantidade de caracteres
+            document.write(nome.toUpperCase() + '<br/>') // toUpperCase torna todas as letras maiúsculas
+            document.write(nome.toLowerCase() + '<br/>') // toLowerCase torna todas as letras minúsculas
+            document.write(nome[1] + '<br/>') // retornando um caractere específico da string
+            document.write(nome.slice(2) + '<br/>') // slice extrai todos os caracteres a partir de um caractere (no caso 2)
+            
+            // nome = nome.replace('u', 'v') replace substitui caracteres por outros, no caso substitui o u (se tiver) por v
+            // document.write(nome)
+
+        </script>
+
+    </body>
+
+</html>
