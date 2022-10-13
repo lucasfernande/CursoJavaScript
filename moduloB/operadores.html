@@ -6,6 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Operadores</title>
+
+        <style>
+            
+            body {
+                font: normal 20px 'Arial';
+            }
+
+        </style>
     </head>
 
     <body>
@@ -14,12 +22,12 @@
 
             /* 
                 Operadores Aritméticos
-                + -> soma
-                - -> subtração
-                * -> multiplicação
-                / -> divisão
-                % -> módulo (resto da divisão)
-                ** -> exponenciação
+                + -> soma                       += -> variável recebe ela mesma somado a um valor (exemplo: x = x + y -> x += y)
+                - -> subtração                  -=
+                * -> multiplicação              *=
+                / -> divisão                    /=
+                % -> módulo (resto da divisão)  %=
+                ** -> exponenciação             **=
             
                 Operadores Relacionais
                 > -> maior
@@ -39,6 +47,12 @@
                 condição ? true : false
             */
 
+            let num = Number(window.prompt('Digite um número'))
+            document.write(`${num} Multiplicado por 2: ${num * 2} </br>`)
+            document.write(`${num} Dividido por 2: ${num / 2} </br>`)
+            document.write(`Resto de ${num} Dividido por 2: ${num % 2} </br>`)
+            document.write(`${num} Elevado a 2: ${num ** 2} </br>`)
+            
         </script>
 
     </body>
