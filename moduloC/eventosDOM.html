@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventos no DOM</title>
+        
+        <style>
+            
+            #area {
+                font: normal 15pt sans-serif;
+                background-color: rgb(9, 104, 99);
+                color: white;
+                
+                width: 200px;
+                height: 200px;
+
+                text-align: center;
+                line-height: 200px;
+            }
+
+        </style>
+
+    </head>     
+    
+    <body>
+
+        <div id="area">
+            Interaja
+        </div>
+
+        <script>
+
+            /* 
+
+                Alguns eventos com o mouse
+                mouseenter -> o evento será disparado quando o cursor entrar na div 
+                mousemove -> o evento será disparado quando o usuário mover o cursor dentro da div
+                mousedown -> o evento será disparado quando o usuário clicar (e segurar) dentro da div
+                mouseup -> o evento será disparado quando o usuário estiver segurando o botão do mouse e soltá-lo dentro da div
+                click -> o evento será disparado quando o usuário clicar na div
+                mouseout -> o evento será disparado quando o cursor sair de dentro da div
+
+            */
+
+            let area = document.querySelector('#area')
+
+            area.addEventListener('click', clicou)
+            area.addEventListener('mouseenter', entrou)
+            area.addEventListener('mouseout', saiu)
+
+            function clicou() {
+                area.style.backgroundColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})` // mudando a cor do background aleatóriamente
+                area.innerText = 'Clicou!'
+            }
+
+            function entrou() {
+                area.innerText = 'Entrou!'
+            }
+
+            function saiu() {
+                area.innerText = 'Saiu!'
+            }
+
+            function random(num) { // gera num número aleatório
+                return Math.floor(Math.random() * num) + 1
+            }
+
+
+        </script>
+
+    </body>
+
+</html>
